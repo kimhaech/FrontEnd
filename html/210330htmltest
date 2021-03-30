@@ -1,0 +1,37 @@
+<!DOCTYPE html><!--!+tab을 하면 자동 양식이 생성된다.-->
+<html lang="ko">
+  <head><!--주석은 이렇게 사용-->
+    <meta charset="utf-8">
+    <title>문서 제목</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <script>
+      document.addEventListener('click', function () {
+        alert('Clicked!');
+      });
+    </script>
+  </head>
+  <body><!--&nbsp는 공백 한 칸-->
+    <h1>화면에 표시할&nbsp;모든 콘텐츠는 이곳에 기술.</h1>
+    <hr>
+    <h3>여러 나라의 인사말</h3>
+    <hr>
+    <p>안녕하세요</p>
+    <blockquote>
+        <p><q>Hello</q></p>
+        <p>こんにちは</p>
+        <p>你好</p>
+        <p>שלום</p>
+        <p>สวัสดี</p>
+    </blockquote>
+    <p>This text is normal.</p>
+    <b>This text is bold.</b>
+    <p style="font-style: italic;">This <del>text</del> is <mark style="background-color: violet;">italic.</mark></p>
+    <strong>This text is strong.</strong>
+  </body>
+</html>
