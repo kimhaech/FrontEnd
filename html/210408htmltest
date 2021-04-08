@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+  <body>
+    <h2>중첩 목록</h2>
+    <ol type='I'>
+      <li>Coffee</li>
+        <ol type='1'>
+            <li>아메리카노</li>
+            <li>카푸치노</li>
+            <li>라떼</li>
+        </ol>
+      <li>Tea</li>
+        <ol type='1'>
+            <li>관음차</li>
+            <li>우롱차</li>
+            <li>녹차</li>
+        </ol>
+      <li>Milk</li>
+      <li>Juice</li>
+    </ol>
+    <style>
+        table, th, td {
+            border: 1px solid;
+            border-collapse: collapse;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        th, td {
+            padding: 15px;
+        }
+    </style>
+    <h2 style="text-align: center;">first table</h2>
+    <table>
+        <tr>
+            <th>메뉴</th>
+            <th colspan="2">사이즈</th>
+            <th colspan="2">가격</th>
+        </tr>
+        <tr>
+            <td>아메리카노</td>
+            <td>S</td>
+            <td>L</td>
+            <td>3000</td>
+            <td>4000</td>
+        </tr>
+        <tr>
+            <td>라떼</td>
+            <td>S</td>
+            <td>L</td>
+            <td>3500</td>
+            <td>4500</td>
+        </tr>
+        <tr> <!--열 빈공간이 생긴다-->
+            <td>아인슈페너</td>
+            <td colspan="2">L</td>
+            <!--<td></td>-->
+            <td colspan="2">5000</td>
+            <!--<td></td>-->
+        </tr>
+       
+    </table>
+    <h2 style="text-align: center;">second table</h2>
+    <table>
+            <tr>
+                <th>이름</th>
+                <th>전화번호</th>    
+            </tr>
+            <tr>
+                <th rowspan="2">홍길동</th>
+                <th>02-1111-1111</th>
+            </tr>
+            <tr>
+                <th>010-2222-2222</th>
+            </tr> 
+    </table>
+  </body>
+</html>
+</body>
+</html>
