@@ -1,1 +1,2 @@
-alert("hi");
+let something
+console.log(something)
