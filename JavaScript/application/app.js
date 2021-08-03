@@ -10,10 +10,11 @@ function onLoginSubmit(event){
   loginForm.classList.add(HIDDEN_CLASSNAME) // form이 사라지도록 classname추가
   const username = loginInput.value // 사용자 이름 저장
   localStorage.setItem(USERNAME_KEY, username) // local storage에 저장
-  paintGreetings(username)
+  paintGreetings()
 }
 
-function paintGreetings(username){
+function paintGreetings(){
+  const username = localStorage.getItem(USERNAME_KEY)
   greeting.innerText = `Hello ${username}`
   greeting.classList.remove(HIDDEN_CLASSNAME)  // greetings를 보여준다
 }
@@ -28,5 +29,5 @@ if(savedUsername === null){
   loginForm.addEventListener("submit",onLoginSubmit)  // 로그인 과정 시작
 }else{
   // greetings를 보여준다
-  paintGreetings(savedUsername)
+  paintGreetings()
 }
