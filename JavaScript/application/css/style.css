@@ -1,3 +1,96 @@
 .hidden{
   display: none;
 }
+
+button{
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+}
+
+#login-form > input {
+    width: 20%;
+    height: 50px;
+    font-size: 150%;
+    color: white;
+    border-bottom: 2px solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: transparent;
+    outline: none;
+    margin-left: 30px;
+}
+
+#greeting{
+    width: auto;
+    height: 50px;
+    font-size: 250%;
+    font-weight: bold;
+    color: white;
+    margin-left: 30px;
+}
+
+#todo-form > input {
+    width: 25%;
+    height: 50px;
+    font-size: 150%;
+    color: white;
+    border-bottom: 2px solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: transparent;
+    outline: none;
+    margin-left: 30px;
+}
+
+
+#login-form > input::placeholder{
+  color: white;
+}
+
+#todo-form > input::placeholder{
+  color: white;
+}
+
+#weather{
+  position: relative;
+  text-align: right;
+  margin-right: 30px;
+  color: white;
+}
+
+#clock{
+  position: relative;
+  text-align: center;
+  font-size: 500%;
+  color: white;
+}
+
+#quote{
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+#todo-list{
+  position: absolute;
+  width: 200px;
+  text-align: left;
+  font-size: 20px;
+  line-height: 2.0;
+  color: white;
+  margin-left: 30px;
+  top: auto;
+}

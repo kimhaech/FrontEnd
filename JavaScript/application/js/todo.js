@@ -11,6 +11,18 @@ function saveToDos() {
   localStorage.setItem(TODOS_KEY, JSON.stringify(toDos))
 }
 
+function OnButton(event){
+  const button = event.target
+  console.log("on button")
+  button.innerText = '❌'
+}
+
+function LeaveButton(event){
+  const button = event.target
+  console.log("leave button")
+  button.innerText = ""
+}
+
 function deleteToDO(event) {
   // todo 삭제 함수
   const li = event.target.parentElement
@@ -25,7 +37,9 @@ function paintToDo(newTodo) {
   const span = document.createElement('span')
   span.innerText = newTodo.text
   const button = document.createElement('button')
-  button.innerText = '❌'
+  button.innerText = ''
+  button.addEventListener('mouseenter', OnButton)
+  button.addEventListener('mouseleave', LeaveButton)
   button.addEventListener('click', deleteToDO)
   li.appendChild(span)
   li.appendChild(button)
@@ -48,9 +62,6 @@ function handleToDoSubmit(event) {
 
 toDoForm.addEventListener('submit', handleToDoSubmit)
 
-function sayHello(item) {
-  console.log('this is the turn of', item)
-}
 const savedToDos = localStorage.getItem(TODOS_KEY)
 
 if (savedToDos !== null) {
