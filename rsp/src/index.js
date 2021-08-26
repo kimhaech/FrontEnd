@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 let count = 0;
 let me = '';
 let other = '';
-let result = 'ql ';
+let result = '';
 
 const w_case = {
   r : 's',
