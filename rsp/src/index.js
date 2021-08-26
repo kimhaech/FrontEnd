@@ -23,35 +23,13 @@ function getResult(me,other){
   }
 }
 
-function handleClick1(){
+function handleClick(hand){
   console.log("가위바위보!");
   if(count%2 === 0){ // count가 2의 배수->me
-    me = 's'
+    me = hand
   }
   else{
-    other = 's'
-  }
-  count++;
-  getResult(me,other)
-}
-function handleClick2(){
-  console.log("가위바위보!");
-  if(count%2 === 0){ // count가 2의 배수->me
-    me = 'r'
-  }
-  else{
-    other = 'r'
-  }
-  count++;
-  getResult(me,other)
-}
-function handleClick3(){
-  console.log("가위바위보!");
-  if(count%2 === 0){ // count가 2의 배수->me
-    me = 'p'
-  }
-  else{
-    other = 'p'
+    other = hand
   }
   count++;
   getResult(me,other)
@@ -62,9 +40,9 @@ ReactDOM.render(
     <>
         <h1 id="title">가위바위보</h1>
         <h2>{result}</h2>
-        <button onClick={handleClick1}>가위</button>
-        <button onClick={handleClick2}>바위</button>
-        <button onClick={handleClick3}>보</button>
+        <button onClick={handleClick('s')}>가위</button>
+        <button onClick={handleClick('r')}>바위</button>
+        <button onClick={handleClick('p')}>보</button>
     </>,
     document.getElementById('root')
 );
