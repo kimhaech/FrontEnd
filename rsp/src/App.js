@@ -19,6 +19,9 @@ function App() {
   const [Hand, setHand] = useState('rock')
   const [OtherHand, setOtherHand] = useState('rock')
   const [gameHistory, setGameHistory] = useState([])  // 게임 승부 결과 기록
+  const [score, setScore] = useState(0) // 플레이어 점수
+  const [otherScore, setOtherScore] = useState(0) // pc점수
+  const [bet, setBet] = useState(1) // 베팅 점수
 
   const handleClick = (value) => {
     setHand(value)
@@ -26,20 +29,37 @@ function App() {
     const nextHistoryItem = getResult(value,nextOtherHand)
     setOtherHand(nextOtherHand)
     setGameHistory([...gameHistory, nextHistoryItem])
+    if(nextHistoryItem === '승리') setScore(score + bet) 
+    if(nextHistoryItem === '패배') setOtherScore(otherScore + bet) 
   }
   const handleClearClick = () => {
     setHand('rock')
     setOtherHand('rock')
     setGameHistory([])  // 빈 배열로 초기화
+    setScore(0)
+    setOtherScore(0)
+    setBet(1)
+  }
+
+  const handleBetChange = (e) => {  // 베팅 변경
+    if(parseInt(e.target.value) >= 1 && parseInt(e.target.value) <= 9){
+      setBet(parseInt(e.target.value))
+    } 
   }
 
   return (
     <>
       <Button onClick={handleClearClick}>{'처음부터'}</Button>
       <div>
+        {score} : {otherScore}
+      </div>
+      <div>
         <HandIcon value={Hand} />
         vs
         <HandIcon value={OtherHand} />
+      </div>
+      <div>
+          <input type="number" value={bet} min={1} max={9} onChange={handleBetChange}></input>
       </div>
       <div>
         <p>
